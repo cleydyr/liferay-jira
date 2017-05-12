@@ -17,7 +17,7 @@ class LiferayJira {
   findIssue(issue) {
     return new Promise((fulfill, reject) => {
       this.jira.findIssue(issue, (error, issue) => {
-        if (error) return reject(error);
+        if (error) reject(error);
         else fulfill(issue);
       })
     });
